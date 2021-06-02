@@ -11,30 +11,32 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* Ph.D. in Computer Vision, Deakin University, 2024 (expected)
+* B.S. in Information Technology, Posts and Telecommunications Institute of Technology (Hanoi, Vietnam), 2015
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Nov 2019 - April 2021: Research Engineer
+  * VinAI Research, Vietnam
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Mar 2018 - Nov 2019: Machine Learning Engineer
+  * Sun Asterisk Inc.
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Computer Vision
+  * Pytorch, Tensorflow, Mxnet, ncnn, caffe, onnx
+  * AI Integration/ Deployment on Embedded Device
+* Android Development
+* Web Development
+  * Frontend: VueJS, ReactJS
+  * Backend: Django, Flask, Laravel, Ruby on Rail
+
+Products
+======
+  <ul>{% for post in site.teaching %}
+    {% include archive-single-cv.html %}
+  {% endfor %}</ul>
 
 Publications
 ======
@@ -48,12 +50,3 @@ Talks
     {% include archive-single-talk-cv.html %}
   {% endfor %}</ul>
   
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
