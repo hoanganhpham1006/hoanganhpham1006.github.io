@@ -17,4 +17,4 @@ News and Updates
 - 28/02/2021: I moved to Hochiminh city, Vietnam.
 
 ## 2020
-- 17/02/2021: I received the offer letter for a PhD position at Applied Artificial Intelligent Institute (A2I2), with scholarship!
+- 17/12/2020: I received the offer letter for a PhD position at Applied Artificial Intelligent Institute (A2I2), with scholarship!
