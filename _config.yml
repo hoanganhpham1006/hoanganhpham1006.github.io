@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Home"
 title_separator          : "-"
 name                     : &name "Hoang-Anh Pham"
-description              : &description "Ph.D. Candidate @ A2I2, Deakin University"
+description              : &description "Ph.D. Candidate in Computer Vision @ A2I2, Deakin University"
 url                      : https://hoanganhpham1006.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "hoanganhpham1006.github.io"
@@ -32,7 +32,7 @@ comments:
     colorscheme          : # "light" (default), "dark"
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
+  branch                 : "master" # "master", "gh-pages"
   commitMessage          : "New comment."
   filename               : comment-{@timestamp}
   format                 : "yml"
@@ -82,10 +82,10 @@ analytics:
 author:
   name             : "Hoang-Anh Pham"
   avatar           : "profile.png"
-  bio              : "Ph.D. Candidate @ A2I2, Deakin University"
-  location         : "Geelong, Victoria, Australia"
+  bio              : "Ph.D. Candidate in Computer Vision @ A2I2, Deakin University"
+  location         : "Hochiminh city, Vietnam"
   employer         :
-  pubmed           : ""
+  pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=o-vYYecAAAAJ"
   email            : "hoanganh.pham.12327@gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
@@ -102,19 +102,20 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
-  orcid            : ""
+  linkedin         : "hoanganhpham-pha"
+  orcid            : 
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : ""
+  twitter          : "anh_p_h"
   vine             :
   weibo            :
   xing             :
   youtube          :
   wikipedia        :
+  kaggle           : "https://www.kaggle.com/hoanganhpham"
 
 
 # Reading Files
@@ -178,6 +179,9 @@ collections:
   teaching:
     output: true
     permalink: /:collection/:path/
+  products:
+    output: true
+    permalink: /:collection/:path/
   publications:
     output: true
     permalink: /:collection/:path/
@@ -213,6 +217,15 @@ defaults:
   - scope:
       path: ""
       type: teaching
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # _products
+  - scope:
+      path: ""
+      type: products
     values:
       layout: single
       author_profile: true

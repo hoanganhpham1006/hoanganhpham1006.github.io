@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: "Hire me!"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -34,7 +34,7 @@ Skills
 
 Products
 ======
-  <ul>{% for post in site.teaching %}
+  <ul>{% for post in site.products %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 

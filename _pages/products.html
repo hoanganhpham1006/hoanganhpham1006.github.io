@@ -1,0 +1,12 @@
+---
+layout: archive
+title: "Products"
+permalink: /products/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% for post in site.products reversed %}
+  {% include archive-single.html %}
+{% endfor %}

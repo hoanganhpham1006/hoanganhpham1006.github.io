@@ -7,5 +7,14 @@ redirect_from:
   - /about/
   - /about.html
 ---
-Here is my page!
-<!-- This is the front page of a website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io). -->
+Hi, welcome to my page (This is not a kind of serious academic page). I am learning Computer Vision, and also a piano learner, a soccer learner, a running learner.
+
+News and Updates
+======
+## 2021
+- 01/06/2021: I started chasing the Ph.D. in Computer Vision at Applied Artificial Intelligent Institute (A2I2), Deakin University under the supervision of [A/P Truyen Tran](https://truyentran.github.io/), [A/P Vuong Le](https://vuongle2.github.io/) and [Prof Tu Minh Phuong](https://sites.google.com/view/tmphuong/).
+- 26/04/2021: I left my job at VinAI Research, Vietnam.
+- 28/02/2021: I moved to Hochiminh city, Vietnam.
+
+## 2020
+- 17/02/2021: I received the offer letter for a PhD position at Applied Artificial Intelligent Institute (A2I2), with scholarship!
