@@ -1,7 +1,7 @@
 ---
 title: "Session-Based Recommendation with Self-Attention"
 collection: publications
-permalink: /publication/fashion-retrieval
+permalink: /publication/session-based-rec-self-att
 excerpt: ''
 date: 2019-12-04
 venue: 'SoICT 2019'
