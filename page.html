@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathMind AI - Revolutionizing Math Education</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #f39c12;
+            --text-color: #333;
+            --bg-color: #f4f4f4;
+            --gradient-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: var(--gradient-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+        main {
+            margin-top: 80px;
+        }
+        section {
+            padding: 80px 0;
+        }
+        h1, h2, h3, h4 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        p {
+            font-weight: 300;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        .cta-button {
+            display: inline-block;
+            background: var(--gradient-bg);
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .feature-item {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+        form {
+            display: grid;
+            gap: 20px;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+        button {
+            background: var(--gradient-bg);
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+        }
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        footer {
+            background: var(--gradient-bg);
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin-bottom: 10px;
+            }
+        }
+        .slider {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide-container {
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide-container.active {
+            opacity: 1;
+        }
+        .slide {
+            flex: 1;
+            padding: 10px;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .founder {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .founder img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .founder-info {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>MathMind AI</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#features" class="nav-link">Features</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <style>
+        @keyframes gradientAnimation {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+        header {
+            background: linear-gradient(-45deg, #667eea, #764ba2, #6B8DD6, #8E37D7);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background-color: var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover::before {
+            width: 100%;
+            left: 0;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: var(--secondary-color);
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%) scale(0);
+            transition: transform 0.3s ease;
+        }
+        .nav-link:hover::after {
+            transform: translateX(-50%) scale(1);
+        }
+    </style>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h2>Revolutionizing Math Education with AI</h2>
+                <p>Unlock the power of personalized learning with our cutting-edge LLM technology.</p>
+                <a href="#" class="cta-button">Get Started</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>About MathMind AI</h2>
+                <p>We're a passionate team of educators and AI experts on a mission to make math learning engaging, effective, and accessible to all.</p>
+                
+                <div class="slider">
+                    <div class="slide-container active">
+                        <div class="slide">
+                            <img src="asset/misconception_1.png" alt="Our Product">
+                        </div>
+                        <div class="slide">
+                            <img src="asset/misconception_2.png" alt="Our Product 2">
+                        </div>
+                    </div>
+                    <div class="slide-container">
+                        <div class="slide">
+                            <img src="asset/misconception_2.png" alt="Our Product 2">
+                        </div>
+                        <div class="slide">
+                            <img src="asset/misconception_3.png" alt="Our Product 3">
+                        </div>
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+
+                <h3>Meet Our Founders</h3>
+                <div class="founders-grid">
+                    <div class="founder" onclick="showFounderDetails('jane')">
+                        <img src="asset/hau.jpg" alt="Hau Nguyen">
+                        <div class="founder-info">
+                            <h4>Hau Nguyen</h4>
+                            <p>Co-founder</p>
+                        </div>
+                    </div>
+                    <div class="founder" onclick="showFounderDetails('john')">
+                        <img src="asset/ha.png" alt="Anh Pham">
+                        <div class="founder-info">
+                            <h4>Anh Pham</h4>
+                            <p>Co-founder</p>
+                        </div>
+                    </div>
+                    <div class="founder" onclick="showFounderDetails('emily')">
+                        <img src="asset/an.jpg" alt="Andy Nguyen">
+                        <div class="founder-info">
+                            <h4>Andy Nguyen</h4>
+                            <p>Co-founder</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="founder-details" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h4 id="modal-name"></h4>
+                        <p id="modal-title"></p>
+                        <p id="modal-bio"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .slider {
+                position: relative;
+                overflow: hidden;
+            }
+            .prev, .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                background-color: rgba(0,0,0,0.8);
+            }
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+            .prev:hover, .next:hover {
+                background-color: rgba(0,0,0,0.5);
+            }
+            .founders-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+            .founder {
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            }
+            .founder:hover {
+                transform: scale(1.05);
+            }
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0,0,0,0.4);
+            }
+            .modal-content {
+                background-color: #fefefe;
+                margin: 15% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+                max-width: 600px;
+            }
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        </style>
+
+        <script>
+            let slideIndex = 0;
+            let slides;
+            let prevButton;
+            let nextButton;
+
+            document.addEventListener('DOMContentLoaded', () => {
+                slides = document.getElementsByClassName("slide-container");
+                prevButton = document.querySelector('.prev');
+                nextButton = document.querySelector('.next');
+
+                showSlides();
+
+                if (prevButton) {
+                    prevButton.addEventListener('click', () => {
+                        slideIndex -= 2;
+                        if (slideIndex < 0) {slideIndex = slides.length - 1}
+                        showSlides();
+                    });
+                }
+
+                if (nextButton) {
+                    nextButton.addEventListener('click', () => {
+                        showSlides();
+                    });
+                }
+
+                const founders = document.querySelectorAll('.founder');
+                founders.forEach(founder => {
+                    founder.addEventListener('click', () => {
+                        const founderId = founder.getAttribute('data-founder');
+                        showFounderDetails(founderId);
+                    });
+                    // Make the image grayscale by default
+                    founder.style.filter = 'grayscale(100%)';
+                    founder.style.transition = 'filter 0.3s ease';
+                    
+                    // Add color on hover
+                    founder.addEventListener('mouseenter', () => {
+                        founder.style.filter = 'grayscale(0%)';
+                    });
+                    founder.addEventListener('mouseleave', () => {
+                        founder.style.filter = 'grayscale(100%)';
+                    });
+                });
+
+                const closeButton = document.querySelector('.close');
+                if (closeButton) {
+                    closeButton.addEventListener('click', closeModal);
+                }
+
+                window.addEventListener('click', (event) => {
+                    const modal = document.getElementById("founder-details");
+                    if (event.target == modal) {
+                        closeModal();
+                    }
+                });
+
+                window.addEventListener('resize', adjustLayout);
+                adjustLayout();
+            });
+
+            function showSlides() {
+                if (!slides) return;
+
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].classList.remove("active");
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}
+                slides[slideIndex-1].classList.add("active");
+                setTimeout(showSlides, 5000); // Change image every 5 seconds
+            }
+
+            function showFounderDetails(founder) {
+                const modal = document.getElementById("founder-details");
+                const modalName = document.getElementById("modal-name");
+                const modalTitle = document.getElementById("modal-title");
+                const modalBio = document.getElementById("modal-bio");
+
+                const founderDetails = {
+                    jane: {
+                        name: "Hau Nguyen",
+                        title: "Co-founder",
+                        bio: "With 15 years of experience in EdTech, Hau is passionate about leveraging AI to transform education."
+                    },
+                    john: {
+                        name: "Anh Pham",
+                        title: "Co-founder",
+                        bio: "Anh brings 10 years of AI and machine learning expertise to create innovative solutions for math education."
+                    },
+                    emily: {
+                        name: "Andy Nguyen",
+                        title: "Co-founder",
+                        bio: "Andy's background in cognitive psychology and educational research helps shape our learning strategies and user experience."
+                    }
+                };
+
+                if (modal && modalName && modalTitle && modalBio) {
+                    modalName.textContent = founderDetails[founder].name;
+                    modalTitle.textContent = founderDetails[founder].title;
+                    modalBio.textContent = founderDetails[founder].bio;
+                    modal.style.display = "block";
+                }
+            }
+
+            function closeModal() {
+                const modal = document.getElementById("founder-details");
+                if (modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+            function adjustLayout() {
+                const foundersGrid = document.querySelector('.founders-grid');
+                if (foundersGrid) {
+                    if (window.innerWidth <= 768) {
+                        foundersGrid.style.gridTemplateColumns = 'repeat(1, 1fr)';
+                    } else if (window.innerWidth <= 1024) {
+                        foundersGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
+                    } else {
+                        foundersGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
+                    }
+                }
+            }
+        </script>
+
+        <section id="features">
+            <div class="container">
+                <h2>Our Features</h2>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <h3>Personalized learning paths</h3>
+                        <p>Tailored curriculum based on individual needs and progress.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Real-time problem-solving assistance</h3>
+                        <p>Get instant help and explanations for any math problem.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Interactive visualizations</h3>
+                        <p>Understand complex concepts through dynamic, visual representations.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Progress tracking and analytics</h3>
+                        <p>Monitor your growth and identify areas for improvement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <div class="container">
+                <h2>What Our Users Say</h2>
+                <blockquote>
+                    "MathMind AI has transformed the way I teach math. My students are more engaged and confident than ever!"
+                    <cite>- Sarah Johnson, Math Teacher</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <form>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 MathMind AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple image slider script
+        const slides = document.querySelectorAll('.slide-container');
+        let currentSlide = 0;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(() => showSlide(currentSlide + 1), 5000); // Change slide every 5 seconds
+    </script>
+</body>
+</html>
