@@ -188,9 +188,12 @@
 <body>
     <header>
         <div class="container">
-            <h1>MathMind AI</h1>
+            <div class="header-content">
+                <h1>MathMind AI</h1>
+                <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()">&#9776;</button>
+            </div>
             <nav>
-                <ul>
+                <ul class="nav-menu" id="nav-menu">
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#features" class="nav-link">Features</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -208,6 +211,11 @@
             background: linear-gradient(-45deg, #667eea, #764ba2, #6B8DD6, #8E37D7);
             background-size: 400% 400%;
             animation: gradientAnimation 15s ease infinite;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         .nav-link {
             position: relative;
@@ -241,7 +249,43 @@
         .nav-link:hover::after {
             transform: translateX(-50%) scale(1);
         }
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 0.8em;
+            color: #fff;
+            cursor: pointer;
+            padding: 2px;
+            line-height: 1;
+            width: 20px;
+            height: 20px;
+        }
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: var(--gradient-bg);
+                padding: 20px 0;
+            }
+            .nav-menu.active {
+                display: flex;
+            }
+        }
     </style>
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
 
     <main>
         <section id="hero">
